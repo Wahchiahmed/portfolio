@@ -29,7 +29,7 @@ export default function Projects() {
 
         <div className="mt-12 text-center">
          <a
-  href="https://github.com/ton-pseudo"
+  href="https://github.com/Wahchiahmed"
   target="_blank"
   rel="noreferrer"
   className="group/btn relative inline-flex items-center gap-2 overflow-hidden rounded-lg border border-border bg-card px-6 py-3 font-medium transition-colors duration-300 hover:border-transparent hover:text-white"

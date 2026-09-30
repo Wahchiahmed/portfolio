@@ -1,8 +1,8 @@
-const stack = ["React", "Next.js", "Laravel", "MySQL", "Java", "Linux"];
+const stack = ["React","Angular", "Next.js", "Laravel","Symfony","Spring boot", "MySQL", "Java","Python", "Linux"]
 
 const profile = [
   ["role", "Full-Stack Developer"],
-  ["stack", "React · Laravel · Java"],
+  ["stack", "React · Laravel · Angular · Spring Boot · MySQL · Java · Python"],
   ["location", "Tunisie"],
   ["status", "Ouvert aux opportunités"],
 ] as const;
@@ -72,7 +72,7 @@ export default function Hero() {
 
           <div className="mt-6 flex gap-5 text-sm text-muted">
             <a
-              href="https://github.com/"
+              href="https://github.com/Wahchiahmed"
               target="_blank"
               rel="noreferrer"
               className="transition hover:text-accent"
@@ -80,7 +80,7 @@ export default function Hero() {
               GitHub
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/in/ahmed-wahchi-2a121b224/"
               target="_blank"
               rel="noreferrer"
               className="transition hover:text-accent"

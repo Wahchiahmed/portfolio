@@ -7,6 +7,8 @@ const gradients: Record<string, string> = {
   Web: "from-blue-500 to-cyan-400",
   Desktop: "from-emerald-500 to-teal-400",
   IA: "from-violet-500 to-fuchsia-500",
+  Systèmes: "from-orange-500 to-red-400",
+  Mobile: "from-pink-500 to-rose-400",
 };
 
 export default function ProjectCard({ project }: { project: Project }) {

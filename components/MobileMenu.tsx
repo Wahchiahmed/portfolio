@@ -98,10 +98,10 @@ export default function MobileMenu() {
           style={{ backgroundColor: "var(--background)" }}
           className="flex gap-5 border-t border-border px-6 py-6 text-sm text-muted"
         >
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition hover:text-accent">
+          <a href="https://github.com/Wahchiahmed" target="_blank" rel="noreferrer" className="transition hover:text-accent">
             GitHub
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="transition hover:text-accent">
+          <a href="https://www.linkedin.com/in/ahmed-wahchi-2a121b224/" target="_blank" rel="noreferrer" className="transition hover:text-accent">
             LinkedIn
           </a>
         </div>
