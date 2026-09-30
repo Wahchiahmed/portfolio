@@ -1,4 +1,5 @@
 import ThemeToggle from "./ThemeToggle";
+import MobileMenu from "./MobileMenu";
 
 const links = [
   { href: "#about", label: "À propos" },
@@ -28,6 +29,7 @@ export default function Navbar() {
             ))}
           </ul>
           <ThemeToggle />
+          <MobileMenu />
         </div>
       </nav>
     </header>

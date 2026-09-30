@@ -35,7 +35,7 @@ export default function Hero() {
           </h1>
 
           <h2 className="mt-3 text-xl font-medium text-muted sm:text-2xl">
-            Développeur Full-Stack en formation
+            Développeur ERP Odoo & Full-Stack{" "}
           </h2>
 
           <p className="mt-6 max-w-lg text-muted">
@@ -71,10 +71,20 @@ export default function Hero() {
           </div>
 
           <div className="mt-6 flex gap-5 text-sm text-muted">
-            <a href="https://github.com/" target="_blank" rel="noreferrer" className="transition hover:text-accent">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-accent"
+            >
               GitHub
             </a>
-            <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="transition hover:text-accent">
+            <a
+              href="https://linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="transition hover:text-accent"
+            >
               LinkedIn
             </a>
           </div>
@@ -87,16 +97,23 @@ export default function Hero() {
               <span className="h-3 w-3 rounded-full bg-red-400" />
               <span className="h-3 w-3 rounded-full bg-yellow-400" />
               <span className="h-3 w-3 rounded-full bg-green-400" />
-              <span className="ml-3 font-mono text-xs text-muted">ahmed.ts</span>
+              <span className="ml-3 font-mono text-xs text-muted">
+                ahmed.ts
+              </span>
             </div>
             <div className="space-y-1 p-6 font-mono text-sm">
               <p>
-                <span className="text-violet-600 dark:text-violet-400">const</span>{" "}
+                <span className="text-violet-600 dark:text-violet-400">
+                  const
+                </span>{" "}
                 ahmed = {"{"}
               </p>
               {profile.map(([key, value]) => (
                 <p key={key} className="pl-4">
-                  <span className="text-blue-600 dark:text-blue-400">{key}</span>:{" "}
+                  <span className="text-blue-600 dark:text-blue-400">
+                    {key}
+                  </span>
+                  :{" "}
                   <span className="text-emerald-600 dark:text-emerald-400">
                     &quot;{value}&quot;
                   </span>
