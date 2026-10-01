@@ -1,52 +1,6 @@
-"use client";
-
-import { useEffect, useRef, useState } from "react";
 import Reveal from "./Reveal";
+import SkillLogo from "./SkillLogo";
 import { skillGroups } from "@/data/skills";
-
-function SkillBar({
-  name,
-  level,
-  color,
-}: {
-  name: string;
-  level: number;
-  color: string;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setWidth(level);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.3 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [level]);
-
-  return (
-    <div ref={ref}>
-      <div className="mb-1.5 flex justify-between text-xs">
-        <span className="font-medium text-foreground">{name}</span>
-        <span className="text-muted">{level}%</span>
-      </div>
-      <div className="h-1.5 w-full overflow-hidden rounded-full bg-border">
-        <div
-          className={`h-full rounded-full ${color} transition-[width] duration-1000 ease-out`}
-          style={{ width: `${width}%` }}
-        />
-      </div>
-    </div>
-  );
-}
 
 export default function Skills() {
   return (
@@ -64,27 +18,25 @@ export default function Skills() {
           déployer mes projets.
         </p>
 
-        <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {skillGroups.map((group, i) => (
-            <Reveal key={group.title} delay={i * 80} className="h-full">
-              <div className="h-full rounded-2xl border border-border bg-card p-6 transition hover:-translate-y-1 hover:border-accent/50 hover:shadow-xl hover:shadow-blue-500/10">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-accent/10 text-xl">
-                    {group.icon}
-                  </span>
-                  <h3 className="font-semibold">{group.title}</h3>
-                </div>
+        <div className="mt-12 space-y-10">
+          {skillGroups.map((group, gi) => (
+            <Reveal key={group.title} delay={gi * 80}>
+              <div className="flex items-center gap-2">
+                <span
+                  className="h-2 w-2 rounded-full"
+                  style={{ backgroundColor: group.accent }}
+                />
+                <h3 className="font-semibold">{group.title}</h3>
+              </div>
 
-                <div className="mt-6 space-y-4">
-                  {group.items.map((skill) => (
-                    <SkillBar
-                      key={skill.name}
-                      name={skill.name}
-                      level={skill.level}
-                      color={group.color}
-                    />
-                  ))}
-                </div>
+              <div className="mt-4 grid grid-cols-[repeat(auto-fill,minmax(96px,1fr))] gap-3">
+                {group.items.map((skill) => (
+                  <SkillLogo
+                    key={skill.name}
+                    skill={skill}
+                    accent={group.accent}
+                  />
+                ))}
               </div>
             </Reveal>
           ))}

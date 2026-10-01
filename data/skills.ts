@@ -1,89 +1,85 @@
-export type Skill = { name: string; level: number };
+const DEVICON = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons";
+const SIMPLE = "https://cdn.jsdelivr.net/npm/simple-icons@13/icons";
+
+export type Skill = { name: string; logo?: string };
 
 export type SkillGroup = {
   title: string;
-  icon: string;
-  color: string; // classe Tailwind pour la barre
+  accent: string; // couleur hex utilisée pour le point et le fallback
   items: Skill[];
 };
 
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
-    icon: "🎨",
-    color: "bg-blue-500",
+    accent: "#3b82f6",
     items: [
-      { name: "React", level: 85 },
-      { name: "Next.js", level: 75 },
-      { name: "Angular", level: 70 },
-      { name: "TypeScript", level: 75 },
-      { name: "Tailwind CSS", level: 85 },
+      { name: "React", logo: `${DEVICON}/react/react-original.svg` },
+      { name: "Next.js", logo: `${DEVICON}/nextjs/nextjs-original.svg` },
+      { name: "Angular", logo: `${DEVICON}/angular/angular-original.svg` },
+      { name: "TypeScript", logo: `${DEVICON}/typescript/typescript-original.svg` },
+      { name: "Tailwind CSS", logo: `${DEVICON}/tailwindcss/tailwindcss-plain.svg` },
     ],
   },
   {
     title: "Backend",
-    icon: "⚙️",
-    color: "bg-emerald-500",
+    accent: "#10b981",
     items: [
-      { name: "Laravel", level: 80 },
-      { name: "Spring Boot", level: 70 },
-      { name: "PHP", level: 75 },
-      { name: "Java", level: 75 },
-      { name: "Python", level: 65 },
+      { name: "Laravel", logo: `${DEVICON}/laravel/laravel-plain.svg` },
+      { name: "Spring Boot", logo: `${DEVICON}/spring/spring-original.svg` },
+      { name: "PHP", logo: `${DEVICON}/php/php-original.svg` },
+      { name: "Java", logo: `${DEVICON}/java/java-original.svg` },
+      { name: "Python", logo: `${DEVICON}/python/python-original.svg` },
     ],
   },
-   {
+  {
     title: "Bases de données",
-    icon: "🗄️",
-    color: "bg-amber-500",
+    accent: "#f59e0b",
     items: [
-      { name: "MySQL", level: 80 },
-      { name: "PostgreSQL", level: 65 },
-      { name: "Oracle", level: 55 },
-      { name: "SQL", level: 75 },
-      { name: "FAISS (vectoriel)", level: 60 },
+      { name: "MySQL", logo: `${DEVICON}/mysql/mysql-original.svg` },
+      { name: "PostgreSQL", logo: `${DEVICON}/postgresql/postgresql-original.svg` },
+      { name: "Oracle", logo: `${DEVICON}/oracle/oracle-original.svg` },
+      { name: "SQL" },
+      { name: "FAISS" },
     ],
   },
   {
     title: "IA & RAG",
-    icon: "🧠",
-    color: "bg-violet-500",
+    accent: "#8b5cf6",
     items: [
-      { name: "LangChain", level: 65 },
-      { name: "HuggingFace", level: 60 },
-      { name: "Groq (LLaMA)", level: 60 },
+      { name: "LangChain", logo: `${SIMPLE}/langchain.svg` },
+      { name: "HuggingFace", logo: `${SIMPLE}/huggingface.svg` },
+      { name: "Groq" },
     ],
   },
   {
     title: "Systèmes & Réseaux",
-    icon: "🌐",
-    color: "bg-cyan-500",
+    accent: "#06b6d4",
     items: [
-      { name: "C", level: 70 },
-      { name: "C++", level: 65 },
-      { name: "Linux", level: 70 },
-      { name: "Réseaux", level: 65 },
+      { name: "C", logo: `${DEVICON}/c/c-original.svg` },
+      { name: "C++", logo: `${DEVICON}/cplusplus/cplusplus-original.svg` },
+      { name: "Linux", logo: `${DEVICON}/linux/linux-original.svg` },
+      { name: "Réseaux" },
     ],
   },
   {
     title: "Intégrations & Paiement",
-    icon: "🔌",
-    color: "bg-pink-500",
+    accent: "#ec4899",
     items: [
-      { name: "Stripe", level: 60 },
-      { name: "Twilio (SMS)", level: 60 },
-      { name: "SMTP", level: 70 },
-      { name: "EmailJS", level: 75 },
+      { name: "Stripe", logo: `${SIMPLE}/stripe.svg` },
+      { name: "Twilio", logo: `${SIMPLE}/twilio.svg` },
+      { name: "SMTP" },
+      { name: "EmailJS" },
     ],
   },
   {
     title: "Outils",
-    icon: "🛠️",
-    color: "bg-rose-500",
+    accent: "#f43f5e",
     items: [
-      { name: "Git & GitHub", level: 85 },
-      { name: "VS Code", level: 90 },
-      { name: "IntelliJ IDEA", level: 70 },
+      { name: "Git", logo: `${DEVICON}/git/git-original.svg` },
+      { name: "GitHub", logo: `${DEVICON}/github/github-original.svg` },
+      { name: "VS Code", logo: `${DEVICON}/vscode/vscode-original.svg` },
+      { name: "IntelliJ IDEA", logo: `${DEVICON}/intellij/intellij-original.svg` },
     ],
   },
 ];

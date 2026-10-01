@@ -3,9 +3,12 @@ import MobileMenu from "./MobileMenu";
 
 const links = [
   { href: "#about", label: "À propos" },
+  { href: "#experience", label: "Expérience" },
+  { href: "#education", label: "Éducation" },
   { href: "#projects", label: "Projets" },
   { href: "#skills", label: "Compétences" },
   { href: "#contact", label: "Contact" },
+  
 ];
 
 export default function Navbar() {

@@ -10,7 +10,7 @@ const stats = [
     value: skillGroups.reduce((n, g) => n + g.items.length, 0),
     label: "Technologies",
   },
-  { value: 2, suffix: "+", label: "Années de pratique" },
+  { value: 4, suffix: "+", label: "Années de pratique" },
 ];
 
 export default function About() {
@@ -36,38 +36,60 @@ export default function About() {
                 className="absolute -inset-3 rounded-3xl bg-linear-to-br from-blue-500/30 to-violet-500/30 blur-xl"
               />
               <div className="relative flex aspect-square items-center justify-center overflow-hidden rounded-3xl border border-border bg-card">
-                <Image src="/images/imgprofile.jpg" fill className="object-cover" alt="Photo d'Ahmed" />              </div>
+                <Image
+                  src="/images/imgprofile.jpg"
+                  fill
+                  className="object-cover "
+                  alt="Photo d'Ahmed"
+                />{" "}
+              </div>
               <div className="absolute -bottom-4 -right-4 flex items-center gap-2 rounded-xl border border-border bg-card px-4 py-2 shadow-lg">
                 <span className="h-2.5 w-2.5 animate-pulse rounded-full bg-emerald-500" />
-                <span className="text-xs font-medium">Ouvert aux opportunités</span>
+                <span className="text-xs font-medium">
+                  Ouvert aux opportunités
+                </span>
               </div>
             </div>
           </Reveal>
 
           {/* Texte + stats */}
           <div className="md:col-span-3">
-            <Reveal delay={100} className="space-y-4 leading-relaxed text-muted">
+            <Reveal
+              delay={100}
+              className="space-y-4 leading-relaxed text-muted"
+            >
               <p>
-                Je suis étudiant et passionné par le développement logiciel.
-                J’aime concevoir des applications de bout en bout : l’interface
-                avec React, la logique métier et l’API avec Laravel, et la base
-                de données avec MySQL.
-              </p>
-              <p>
-                Au-delà du web, je développe aussi des applications desktop en
-                Java, et je m’intéresse aux réseaux et aux systèmes Linux.
-                C’est ce qui m’a amené à créer DocuMind, un assistant basé sur
-                le RAG pour interroger de la documentation technique.
-              </p>
-              <p>
-                Je cherche{" "}
-                <strong className="text-foreground">
-                  [un stage / une alternance / une première expérience]
-                </strong>{" "}
-                où je pourrai apprendre, contribuer à de vrais projets et
-                progresser au sein d’une équipe.
+                Je suis développeur ERP Odoo & Full-Stack et actuellement en
+                cycle d’ingénieur en Génie Informatique. Mon parcours m’a permis
+                de travailler sur des applications web, des solutions métier et
+                des systèmes d’information, aussi bien sur le frontend que sur
+                le backend.
               </p>
 
+              <p>
+                Je développe et personnalise des solutions Odoo avec Python, XML
+                et PostgreSQL, tout en intervenant sur des applications
+                Full-Stack avec React, Angular, Laravel et Spring Boot. Je
+                travaille également avec MySQL, PostgreSQL, Git, Docker et
+                Linux, et j’ai l’habitude d’intégrer des services externes via
+                des APIs.
+              </p>
+
+              <p>
+                Je m’intéresse également à l’intelligence artificielle et aux
+                architectures basées sur les LLM. Parmi mes projets, j’ai
+                notamment conçu un assistant technique basé sur une architecture
+                RAG, permettant d’interroger une documentation spécialisée et de
+                générer des réponses contextualisées.
+              </p>
+
+              <p>
+                Aujourd’hui, je souhaite rejoindre une équipe technique au sein
+                de laquelle je pourrai mettre mon expérience au service de
+                projets concrets, contribuer au développement de solutions
+                fiables et continuer à approfondir mes compétences en
+                développement logiciel, ERP et technologies cloud.
+              </p>
               <a
                 href="/cv.pdf"
                 download

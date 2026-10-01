@@ -1,8 +1,18 @@
-const stack = ["React","Angular", "Next.js", "Laravel","Symfony","Spring boot", "MySQL", "Java","Python", "Linux"]
+const stack = [
+  "React",
+  "Angular",
+  "Laravel",
+  "Spring boot",
+  "MySQL",
+  "Java",
+  "Python",
+  "Linux",
+];
 
 const profile = [
-  ["role", "Full-Stack Developer"],
-  ["stack", "React · Laravel · Angular · Spring Boot · MySQL · Java · Python"],
+  ["role", "ERP Odoo & Full-Stack"],
+  ["focus", "Web · ERP · APIs · IA"],
+  ["stack", "Odoo · React · Angular · Laravel"],
   ["location", "Tunisie"],
   ["status", "Ouvert aux opportunités"],
 ] as const;
@@ -39,9 +49,11 @@ export default function Hero() {
           </h2>
 
           <p className="mt-6 max-w-lg text-muted">
-            Je conçois des applications web avec React et Laravel, des
-            applications desktop en Java, et je m’intéresse aux réseaux et aux
-            systèmes.
+            Je conçois et développe des solutions web et ERP, de la logique
+            métier aux interfaces utilisateur, en passant par les APIs et les
+            bases de données. Mon expérience couvre notamment Odoo, React,
+            Angular, Laravel et Spring Boot, avec un intérêt pour les systèmes
+            Linux et les solutions basées sur l’IA.
           </p>
 
           <ul className="mt-6 flex flex-wrap gap-2">
